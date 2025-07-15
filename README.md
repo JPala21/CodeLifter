@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+# 🏋️‍♂️ CodeLifter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CodeLifter** es una aplicación web desarrollada con **React**, **TypeScript** y **CSS puro**. Nace como un proyecto personal con el objetivo de construir un sistema completo de gimnasio, desde el seguimiento de rutinas hasta la gestión de entrenamientos y progresos físicos.
 
-Currently, two official plugins are available:
+Diseñado desde cero por un dev que también entrena 💪👨‍💻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Objetivo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Crear una plataforma web para:
+- Planificar y visualizar rutinas de entrenamiento
+- Registrar ejercicios, repeticiones y tiempos
+- Hacer seguimiento de avances personales
+- Aprender y practicar tecnologías modernas de frontend (React + TS)
+- Tener control completo de diseño (UI en Figma) y desarrollo
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ⚙️ Tecnologías utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React + Vite**
+- **TypeScript**
+- **CSS puro (sin frameworks de UI)**
+- **Figma** (diseño previo)
+- (Más adelante: Posible integración con un backend en Node o Supabase)
+
+---
+
+## 📁 Estructura del proyecto
+
+```txt
+src/
+│
+├── assets/             # Imágenes, íconos, fuentes, etc.
+│
+├── components/         # Componentes reutilizables (Botón, Card, Header, etc.)
+│
+├── pages/              # Cada pantalla o vista completa (Home.tsx, Rutinas.tsx, etc.)
+│
+├── layouts/            # Estructuras de página (por ejemplo, con header + footer)
+│
+├── hooks/              # Hooks personalizados (useAuth, useFetch, etc.)
+│
+├── services/           # Lógica para llamar APIs o manejar datos
+│   └── api.ts
+│
+├── store/              # Estado global si usas Context o Redux (opcional)
+│
+├── utils/              # Funciones helpers, formateadores, validaciones
+│
+├── App.tsx             # Punto central de rutas y layouts
+├── main.tsx            # Punto de entrada (ReactDOM.createRoot)
+└── index.css           # Estilos base / globales
+
 ```
+---
+## 🛠️ Instalación y ejecución local
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- yarn install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- yarn dev
