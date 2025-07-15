@@ -45,7 +45,7 @@ src/
 ├── services/           # Lógica para llamar APIs o manejar datos
 │   └── api.ts
 │
-├── store/              # Estado global si usas Context o Redux (opcional)
+├── models/              # Estado modelos y estructuras de datos
 │
 ├── utils/              # Funciones helpers, formateadores, validaciones
 │
